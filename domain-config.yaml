@@ -2,7 +2,7 @@ apiVersion: "weblogic.oracle/v3"
 kind: Domain
 metadata:
   name: base-domain
-  namespace: base-domain-ns
+  namespace: bt-cluster
   labels:
     weblogic.resourceVersion: domain-v2
     weblogic.domainUID: base-domain
@@ -58,7 +58,7 @@ spec:
       channels:
     # The Admin Server's NodePort
        - channelName: default
-         nodePort: 30001
+         nodePort: 30002
     # Uncomment to export the T3Channel as a service
     #    - channelName: T3Channel
   # clusters is used to configure the desired behavior for starting member servers of a cluster.  
