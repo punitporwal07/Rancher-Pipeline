@@ -1,14 +1,14 @@
 apiVersion: "weblogic.oracle/v3"
 kind: Domain
 metadata:
-  name: base-domain
+  name: base_domain
   namespace: bt-cluster
   labels:
     weblogic.resourceVersion: domain-v2
-    weblogic.domainUID: base-domain
+    weblogic.domainUID: base_domain
 spec:
   # The WebLogic Domain Home
-  domainHome: /wls_domains/base-domain
+  domainHome: /wls_domains/base_domain
   # If the domain home is in the base docker image
   domainHomeInImage: true
   # The WebLogic Server Docker image that the Operator uses to start the domain
@@ -21,7 +21,7 @@ spec:
   # Identify which Secret contains the WebLogic Admin credentials (note that there is an example of
   # how to create that Secret at the end of this file)
   webLogicCredentialsSecret: 
-    name: base-domain-weblogic-credentials
+    name: base_domain-weblogic-credentials
   # Whether to include the server out file into the pod's stdout, default is true
   includeServerOutInPodLog: true
   # Whether to enable log home
