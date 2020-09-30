@@ -7,12 +7,12 @@ metadata:
     weblogic.resourceVersion: domain-v2
     weblogic.domainUID: base_domain
 spec:
-  # The WebLogic Domain Home
   domainHome: /wls_domains/base_domain
   # If the domain home is in the base docker image
   domainHomeInImage: true
   # The WebLogic Server Docker image that the Operator uses to start the domain
-  image: "lhr.ocir.io/oscemea001/nykredit/aussietripper:latest"
+  # image: "lhr.ocir.io/oscemea001/nykredit/aussietripper:latest"
+  image: "container-registry.oracle.com/middleware/weblogic:14.1.1.0-slim-8"
   # imagePullPolicy defaults to "Always" if image version is :latest
   imagePullPolicy: "Always"
   # Identify which Secret contains the credentials for pulling an image
@@ -85,3 +85,4 @@ spec:
                 topologyKey: "kubernetes.io/hostname"
   # The number of managed servers to start for unlisted clusters
   # replicas: 1
+...
