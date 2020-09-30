@@ -2,7 +2,6 @@ stages:
 - name: Deploy Domain-in-Image
   steps:
   - applyYamlConfig:
-      #path: ./base_domain.yaml
-      path: ./domain-in-image-sample.yaml
+      path: ./base_domain.yaml
 timeout: 60
 notification: {}
