@@ -12,7 +12,8 @@ $ helm repo update
 
 $ helm install sample-weblogic-operator weblogic-operator/weblogic-operator  --namespace sample-weblogic-operator-ns   --set serviceAccount=sample-weblogic-operator-sa   --set "domainNamespaces={}"   --wait
 
-Once you have installed the operator you need to tell it what namedpaces to manage. So if you're going to deploy your domain to the sample-domain1-ns namespace then:
+Once you have installed the operator you need to tell it what namespaces to manage. 
+So if you're going to deploy your domain to the base-domain-ns namespace then:
 
-$ helm upgrade   --reuse-values   --set "domainNamespaces={sample-domain1-ns}"   --wait   sample-weblogic-operator   kubernetes/charts/weblogic-operator
+$ helm upgrade   --reuse-values   --set "domainNamespaces={base-domain-ns}"   --wait   sample-weblogic-operator   kubernetes/charts/weblogic-operator
 
