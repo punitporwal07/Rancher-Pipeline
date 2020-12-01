@@ -1,14 +1,14 @@
 apiVersion: "weblogic.oracle/v3"
 kind: Domain
 metadata:
-  name: sample-domain1
-  namespace: sample-domain1-ns
+  name: base-domain1
+  namespace: base-domain-ns1
   labels:
     weblogic.resourceVersion: domain-v2
-    weblogic.domainUID: sample-domain1
+    weblogic.domainUID: base-domain1
 spec:
   # The WebLogic Domain Home
-  domainHome: /u01/oracle/user_projects/domains/sample-domain1
+  domainHome: /u01/oracle/user_projects/domains/base-domain1
   # If the domain home is in the image
   domainHomeInImage: true
   # The WebLogic Server Docker image that the Operator uses to start the domain
@@ -21,7 +21,7 @@ spec:
   # Identify which Secret contains the WebLogic Admin credentials (note that there is an example of
   # how to create that Secret at the end of this file)
   webLogicCredentialsSecret: 
-    name: sample-domain1-weblogic-credentials
+    name: base-domain1-weblogic-credentials
   # Whether to include the server out file into the pod's stdout, default is true
   includeServerOutInPodLog: true
   # Whether to enable log home
