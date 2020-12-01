@@ -2,7 +2,7 @@ apiVersion: "weblogic.oracle/v3"
 kind: Domain
 metadata:
   name: base_domain
-  namespace: bt-cluster
+  namespace: base-domain-ns1
   labels:
     weblogic.resourceVersion: domain-v2
     weblogic.domainUID: base_domain
