@@ -1,5 +1,5 @@
 stages:
-- name: Deploy base-Domain-in-Image
+- name: sample-domain1
   steps:
   - applyYamlConfig:
       path: ./sample-domain1.yaml
